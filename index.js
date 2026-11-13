@@ -24,7 +24,7 @@ async function buscarConductor(){
   return lista[0] || null;
 }
 app.post('/webhook', async (req,res)=>{
- console.log('LLEGO MENSAJE'); try{
+console.log('LLEGO MENSAJE');try{
     let msg = req.body.entry?.[0]?.changes?.[0]?.value?.messages?.[0];
     if(!msg) return res.sendStatus(200);
     let numero = msg.from;
