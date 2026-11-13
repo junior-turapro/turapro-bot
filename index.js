@@ -1,4 +1,4 @@
-// TURAPRO BOT FINAL - Numero del robot: 3105109092
+2// TURAPRO BOT FINAL - Numero del robot: 3105109092
 // Tu personal: 3167615144 - NO se toca
 // Cuando Meta te de el Token y el Phone ID REAL del 3105109092, los pegas en Render:
 // WHATSAPP_TOKEN = Token nuevo
@@ -63,4 +63,4 @@ app.get('/webhook', (req,res)=>{
   if(req.query['hub.verify_token']==='TURAPRO123') return res.send(req.query['hub.challenge']);
   return res.sendStatus(403);
 });
-app.listen(3000, ()=>console.log('TURAPRO BOT 3105109092 corriendo'));
+app.listen(process.env.PORT || 3000, ()=>console.log('TURAPRO BOT 3105109092 corriendo'));
