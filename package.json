@@ -1,8 +1,8 @@
 {
   "name": "turapro-bot",
   "version": "1.0.0",
-  "main": "turapro_x5f_bot_x5f_3105109092_x5f_final.js",
-  "scripts": { "start": "node turapro_x5f_bot_x5f_3105109092_x5f_final.js" },
+  "main": "index.js",
+  "scripts": { "start": "node index.js" },
   "dependencies": {
     "express": "^4.18.2",
     "axios": "^1.6.0",
