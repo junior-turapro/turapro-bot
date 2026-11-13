@@ -24,7 +24,7 @@ async function buscarConductor(){
   return lista[0] || null;
 }
 app.post('/webhook', async (req,res)=>{
-  try{
+ console.log('LLEGO MENSAJE'); try{
     let msg = req.body.entry?.[0]?.changes?.[0]?.value?.messages?.[0];
     if(!msg) return res.sendStatus(200);
     let numero = msg.from;
@@ -60,7 +60,7 @@ app.post('/webhook', async (req,res)=>{
 });
 const VERIFY = process.env.VERIFY_TOKEN || 'TURAPRO123';
 app.get('/webhook', (req,res)=>{
-  if(req.query['hub.verify_token']===VERIFY) return res.send(req.query['hub.challenge']);
+  console.log('LLEGO MENSAJE');if(req.query['hub.verify_token']===VERIFY) return res.send(req.query['hub.challenge']);
   return res.sendStatus(403);
 });
 app.get('/', (req,res)=>{ res.send('TURAPRO BOT Live'); });
